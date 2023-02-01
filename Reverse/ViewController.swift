@@ -34,13 +34,15 @@ class ViewController: UIViewController {
             if let textToReverse = userInputTextView.text {
                 let separateWords = textToReverse.components(separatedBy: " ")
                 reversedTextLabel.text = String(separateWords.map {$0.reversed()}.joined(separator: " "))
-                changeButtonText.setTitle("Clear", for: .normal)}
+                changeButtonText.setTitle("Clear", for: .normal)
+                progressBar.progress = 0.0
+            }
             
         } else if (changeButtonText.currentTitle == "Clear")   {
             reversedTextLabel.text = ""
             userInputTextView.text = ""
             changeButtonText.setTitle("Reverse", for: .normal)
-            progressBar.progress = 0.0
+            
             userInputTextView.endEditing(true)
         }
         
