@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         progressBar.progress = 0.0
         changeButtonText.setTitle("Reverse", for: .normal)
         userInputTextView.delegate = self
+        reversedTextLabel.textColor = UIColor.systemBlue
         
     }
     
