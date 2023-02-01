@@ -9,30 +9,48 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var reversedTextLabel: UILabel!
     @IBOutlet weak var userInputTextView: UITextField!
+    
+    @IBOutlet weak var changeButtonText: UIButton!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        progressBar.progress = 0.0
+        changeButtonText.setTitle("Reverse", for: .normal)
+        userInputTextView.delegate = self
+        reversedTextLabel.textColor = UIColor.systemBlue
     }
-
+    
     @IBAction func reverseButton(_ sender: UIButton) {
-        if let textToReverse = userInputTextView.text {
+        
+        if (changeButtonText.currentTitle == "Reverse") {
+            if let textToReverse = userInputTextView.text {
+                let separateWords = textToReverse.components(separatedBy: " ")
+                reversedTextLabel.text = String(separateWords.map {$0.reversed()}.joined(separator: " "))
+                changeButtonText.setTitle("Clear", for: .normal)}
             
-            var result = ""
-            
-            let separateWords = textToReverse.components(separatedBy: " ")
-            
-            
-            for aWord in separateWords {
-                let reversedWordsWithSpace = String(aWord.reversed() + " ")
-                result.append(reversedWordsWithSpace)
-                reversedTextLabel.text = result
-                userInputTextView.text = ""
-            }
+        } else if (changeButtonText.currentTitle == "Clear")   {
+            reversedTextLabel.text = ""
+            userInputTextView.text = ""
+            changeButtonText.setTitle("Reverse", for: .normal)
+            progressBar.progress = 0.0
+            userInputTextView.endEditing(true)
         }
         
     }
-    
+}
+
+// MARK: - UITextFieldDelegate
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == userInputTextView {
+            progressBar.progress = 1.0
+            userInputTextView.becomeFirstResponder()
+        }
+    }
 }
