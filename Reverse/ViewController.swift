@@ -14,25 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var userInputTextView: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func reverseButton(_ sender: UIButton) {
         if let textToReverse = userInputTextView.text {
-            
-            var result = ""
-            
             let separateWords = textToReverse.components(separatedBy: " ")
-            
-            
-            for aWord in separateWords {
-                let reversedWordsWithSpace = String(aWord.reversed() + " ")
-                result.append(reversedWordsWithSpace)
-                reversedTextLabel.text = result
-                userInputTextView.text = ""
+            reversedTextLabel.text = String(separateWords.map {$0.reversed()}.joined(separator: " "))
+            userInputTextView.text = ""
+                
             }
+
         }
         
     }
     
-}
+
