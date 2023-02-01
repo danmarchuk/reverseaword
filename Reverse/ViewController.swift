@@ -23,11 +23,10 @@ class ViewController: UIViewController {
         progressBar.progress = 0.0
         changeButtonText.setTitle("Reverse", for: .normal)
         userInputTextView.delegate = self
-        
+        reversedTextLabel.textColor = UIColor.systemBlue
     }
     
     @IBAction func reverseButton(_ sender: UIButton) {
-        
         
         if (changeButtonText.currentTitle == "Reverse") {
             if let textToReverse = userInputTextView.text {
@@ -46,7 +45,7 @@ class ViewController: UIViewController {
     }
 }
 
-
+// MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == userInputTextView {
