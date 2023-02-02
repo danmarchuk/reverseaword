@@ -36,7 +36,6 @@ class ViewController: UIViewController {
                 reversedTextLabel.text = String(separateWords.map {$0.reversed()}.joined(separator: " "))
                 viewBecomesBlue()
                 changeButtonText.setTitle("Clear", for: .normal)
-                progressBar.progress = 0.0
             }
             
         } else if changeButtonText.titleLabel?.text == "Clear"   {
