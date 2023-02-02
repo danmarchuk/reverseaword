@@ -60,13 +60,18 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <progressView opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oAm-iY-m1G">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckn-uN-Sib">
                                                 <rect key="frame" x="0.0" y="40" width="353" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="cYT-Ab-Hy0"/>
+                                                    <constraint firstAttribute="height" constant="1" id="rlN-D7-Hny"/>
                                                 </constraints>
-                                            </progressView>
+                                            </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ckn-uN-Sib" firstAttribute="leading" secondItem="nP3-G3-r78" secondAttribute="leading" id="UpL-Bj-283"/>
+                                            <constraint firstAttribute="trailing" secondItem="ckn-uN-Sib" secondAttribute="trailing" id="nuE-5V-utg"/>
+                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i85-HY-YWh">
                                         <rect key="frame" x="20" y="480.33333333333337" width="333" height="50"/>
@@ -111,7 +116,7 @@
                     <navigationItem key="navigationItem" title="Reverse Words" id="7pS-ED-owF"/>
                     <connections>
                         <outlet property="changeButtonText" destination="gJO-J1-zld" id="hMU-v1-G2z"/>
-                        <outlet property="progressBar" destination="oAm-iY-m1G" id="9Wt-IZ-LVI"/>
+                        <outlet property="grayBlueView" destination="ckn-uN-Sib" id="Q3Q-PU-Mqe"/>
                         <outlet property="reversedTextLabel" destination="i85-HY-YWh" id="62S-4Q-2tt"/>
                         <outlet property="userInputTextView" destination="Tlo-fY-juu" id="8cL-e1-zec"/>
                     </connections>
