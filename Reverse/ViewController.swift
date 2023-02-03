@@ -72,7 +72,7 @@ extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == userInputTextView {
             viewBecomesBlue()
-            userInputTextView.becomeFirstResponder()
+            textField.becomeFirstResponder()
         }
     }
     
