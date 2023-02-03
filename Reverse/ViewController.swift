@@ -30,22 +30,29 @@ class ViewController: UIViewController {
     
     @IBAction func reverseButton(_ sender: UIButton) {
         
-        if changeButtonText.titleLabel?.text == "Reverse" {
+        if changeButtonText.tag == 1 {
             if let textToReverse = userInputTextView.text {
                 let separateWords = textToReverse.components(separatedBy: " ")
                 reversedTextLabel.text = String(separateWords.map {$0.reversed()}.joined(separator: " "))
                 viewBecomesBlue()
+                
                 changeButtonText.setTitle("Clear", for: .normal)
+                print(changeButtonText.tag)
+                //change the tag to 2
+                changeButtonText.tag = 2
             }
             
-        } else if changeButtonText.titleLabel?.text == "Clear"   {
+        } else if changeButtonText.tag == 2   {
             reversedTextLabel.text = ""
             userInputTextView.text = ""
             changeButtonText.setTitle("Reverse", for: .normal)
+            // change the tag to 1
+            changeButtonText.tag = 1
             
             userInputTextView.endEditing(true)
             viewBecomesGray()
             disableButton()
+
         }
         
     }

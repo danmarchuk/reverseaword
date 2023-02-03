@@ -82,13 +82,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-J1-zld">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-J1-zld">
                                         <rect key="frame" x="20" y="665" width="333" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1Rf-fm-P9t"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Reverse"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customIdentifier" value="reverseButton"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="reverseButton:" destination="ccO-BM-G93" eventType="touchUpInside" id="Xpq-Ri-UJP"/>
                                         </connections>
