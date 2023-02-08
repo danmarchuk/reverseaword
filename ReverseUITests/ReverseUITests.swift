@@ -36,7 +36,7 @@ final class ReverseUITests: XCTestCase {
         reverseButton.tap()
         
         // check if the text reversed
-        let reversedLabel = app.staticTexts.element(matching: .any, identifier: "olleH amabO")
+        let reversedLabel = app.staticTexts.element(matching: .any, identifier: "ReversedTextLabel")
         XCTAssertTrue(reversedLabel.label.contains("olleH amabO"))
         
         // click the Clear button
