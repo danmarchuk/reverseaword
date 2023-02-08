@@ -11,7 +11,7 @@
         <!--Reverse Words-->
         <scene sceneID="uwS-re-LR8">
             <objects>
-                <viewController id="ccO-BM-G93" customClass="ViewController" customModule="Reverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ccO-BM-G93" customClass="ReverseApp" customModule="Reverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="thR-5O-Qb0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,7 @@
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i85-HY-YWh">
                                         <rect key="frame" x="20" y="480.33333333333337" width="333" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ReversedTextLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="qfN-tW-fce"/>
                                         </constraints>
