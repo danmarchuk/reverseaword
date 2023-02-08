@@ -7,6 +7,7 @@
 
 import XCTest
 
+
 final class ReverseUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {

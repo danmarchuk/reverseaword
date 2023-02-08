@@ -7,35 +7,59 @@
 
 import XCTest
 
+
 final class ReverseUITests: XCTestCase {
-
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        // reverse textfield tap and type
+        let reverseTextField = app.textFields["Type Here"]
+        XCTAssertTrue(reverseTextField.exists)
+        reverseTextField.tap()
+        reverseTextField.typeText("Hello Obama")
+        reverseTextField.typeText("\n")
+        
+        
+        
+        // click the reverse button
+        let reverseButton = app.buttons["Reverse"]
+        XCTAssertTrue(reverseButton.exists)
+        reverseButton.tap()
+        
+        // check if the text reversed
+        let reversedLabel = app.staticTexts.element(matching: .any, identifier: "olleH amabO")
+        XCTAssertTrue(reversedLabel.label.contains("olleH amabO"))
+        
+        // click the Clear button
+        let clearButton = app.buttons["Clear"]
+        XCTAssertTrue(clearButton.exists)
+        clearButton.tap()
+        
+        // Check if the textField is clear
+        let clearTextField = app.textFields["Type Here"]
+        XCTAssertTrue(clearTextField.label.isEmpty)
+        
+        // check if the reversedTextlabel isEmpty
+        let clearLabel = app.staticTexts.element(matching: .any, identifier: "ReversedTextLabel")
+        XCTAssertTrue(clearLabel.exists)
+        XCTAssertTrue(clearLabel.label.isEmpty)
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+    
+    //    func testLaunchPerformance() throws {
+    //        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+    //            // This measures how long it takes to launch your application.
+    //            measure(metrics: [XCTApplicationLaunchMetric()]) {
+    //                XCUIApplication().launch()
+    //            }
+    //        }
+    //    }
 }

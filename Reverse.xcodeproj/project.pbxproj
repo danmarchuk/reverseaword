@@ -9,16 +9,25 @@
 /* Begin PBXBuildFile section */
 		93139EC22987FF490072F6FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC12987FF490072F6FC /* AppDelegate.swift */; };
 		93139EC42987FF490072F6FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC32987FF490072F6FC /* SceneDelegate.swift */; };
-		93139EC62987FF490072F6FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC52987FF490072F6FC /* ViewController.swift */; };
 		93139EC92987FF490072F6FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93139EC72987FF490072F6FC /* Main.storyboard */; };
 		93139ECB2987FF4B0072F6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93139ECA2987FF4B0072F6FC /* Assets.xcassets */; };
 		93139ECE2987FF4B0072F6FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93139ECC2987FF4B0072F6FC /* LaunchScreen.storyboard */; };
-		93F3B92F299234EA001277AB /* ReverseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B92E299234EA001277AB /* ReverseUITests.swift */; };
+		9353FBCF29925F20009721B2 /* ReverseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC52987FF490072F6FC /* ReverseApp.swift */; };
+		9353FBD029925F22009721B2 /* ReverseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC52987FF490072F6FC /* ReverseApp.swift */; };
+		9353FBD32992612C009721B2 /* ReverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B94029924F21001277AB /* ReverseTests.swift */; };
 		93F3B931299234EA001277AB /* ReverseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B930299234EA001277AB /* ReverseUITestsLaunchTests.swift */; };
+		93F3B9392992378F001277AB /* ReverseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B92E299234EA001277AB /* ReverseUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		93F3B932299234EA001277AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93139EB62987FF490072F6FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93139EBD2987FF490072F6FC;
+			remoteInfo = Reverse;
+		};
+		93F3B94229924F21001277AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 93139EB62987FF490072F6FC /* Project object */;
 			proxyType = 1;
@@ -31,7 +40,7 @@
 		93139EBE2987FF490072F6FC /* Reverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93139EC12987FF490072F6FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93139EC32987FF490072F6FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93139EC52987FF490072F6FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93139EC52987FF490072F6FC /* ReverseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseApp.swift; sourceTree = "<group>"; };
 		93139EC82987FF490072F6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93139ECA2987FF4B0072F6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93139ECD2987FF4B0072F6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +48,8 @@
 		93F3B92C299234EA001277AB /* ReverseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F3B92E299234EA001277AB /* ReverseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseUITests.swift; sourceTree = "<group>"; };
 		93F3B930299234EA001277AB /* ReverseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93F3B93E29924F21001277AB /* ReverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F3B94029924F21001277AB /* ReverseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93F3B93B29924F21001277AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +82,7 @@
 			children = (
 				93139EC02987FF490072F6FC /* Reverse */,
 				93F3B92D299234EA001277AB /* ReverseUITests */,
+				93F3B93F29924F21001277AB /* ReverseTests */,
 				93139EBF2987FF490072F6FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +92,7 @@
 			children = (
 				93139EBE2987FF490072F6FC /* Reverse.app */,
 				93F3B92C299234EA001277AB /* ReverseUITests.xctest */,
+				93F3B93E29924F21001277AB /* ReverseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +102,7 @@
 			children = (
 				93139EC12987FF490072F6FC /* AppDelegate.swift */,
 				93139EC32987FF490072F6FC /* SceneDelegate.swift */,
-				93139EC52987FF490072F6FC /* ViewController.swift */,
+				93139EC52987FF490072F6FC /* ReverseApp.swift */,
 				93139EC72987FF490072F6FC /* Main.storyboard */,
 				93139ECA2987FF4B0072F6FC /* Assets.xcassets */,
 				93139ECC2987FF4B0072F6FC /* LaunchScreen.storyboard */,
@@ -98,6 +118,14 @@
 				93F3B930299234EA001277AB /* ReverseUITestsLaunchTests.swift */,
 			);
 			path = ReverseUITests;
+			sourceTree = "<group>";
+		};
+		93F3B93F29924F21001277AB /* ReverseTests */ = {
+			isa = PBXGroup;
+			children = (
+				93F3B94029924F21001277AB /* ReverseTests.swift */,
+			);
+			path = ReverseTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +166,24 @@
 			productReference = 93F3B92C299234EA001277AB /* ReverseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		93F3B93D29924F21001277AB /* ReverseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93F3B94429924F21001277AB /* Build configuration list for PBXNativeTarget "ReverseTests" */;
+			buildPhases = (
+				93F3B93A29924F21001277AB /* Sources */,
+				93F3B93B29924F21001277AB /* Frameworks */,
+				93F3B93C29924F21001277AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93F3B94329924F21001277AB /* PBXTargetDependency */,
+			);
+			name = ReverseTests;
+			productName = ReverseTests;
+			productReference = 93F3B93E29924F21001277AB /* ReverseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,6 +204,10 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 93139EBD2987FF490072F6FC;
 					};
+					93F3B93D29924F21001277AB = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 93139EBD2987FF490072F6FC;
+					};
 				};
 			};
 			buildConfigurationList = 93139EB92987FF490072F6FC /* Build configuration list for PBXProject "Reverse" */;
@@ -175,6 +225,7 @@
 			targets = (
 				93139EBD2987FF490072F6FC /* Reverse */,
 				93F3B92B299234EA001277AB /* ReverseUITests */,
+				93F3B93D29924F21001277AB /* ReverseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,6 +248,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93F3B93C29924F21001277AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -204,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93139EC62987FF490072F6FC /* ViewController.swift in Sources */,
+				9353FBCF29925F20009721B2 /* ReverseApp.swift in Sources */,
 				93139EC22987FF490072F6FC /* AppDelegate.swift in Sources */,
 				93139EC42987FF490072F6FC /* SceneDelegate.swift in Sources */,
 			);
@@ -214,8 +272,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F3B92F299234EA001277AB /* ReverseUITests.swift in Sources */,
+				93F3B9392992378F001277AB /* ReverseUITests.swift in Sources */,
 				93F3B931299234EA001277AB /* ReverseUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F3B93A29924F21001277AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9353FBD32992612C009721B2 /* ReverseTests.swift in Sources */,
+				9353FBD029925F22009721B2 /* ReverseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +293,11 @@
 			isa = PBXTargetDependency;
 			target = 93139EBD2987FF490072F6FC /* Reverse */;
 			targetProxy = 93F3B932299234EA001277AB /* PBXContainerItemProxy */;
+		};
+		93F3B94329924F21001277AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93139EBD2987FF490072F6FC /* Reverse */;
+			targetProxy = 93F3B94229924F21001277AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -453,6 +525,42 @@
 			};
 			name = Release;
 		};
+		93F3B94529924F21001277AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63ZB4894ZK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.ReverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reverse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Reverse";
+			};
+			name = Debug;
+		};
+		93F3B94629924F21001277AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63ZB4894ZK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.ReverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reverse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Reverse";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +587,15 @@
 			buildConfigurations = (
 				93F3B934299234EA001277AB /* Debug */,
 				93F3B935299234EA001277AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93F3B94429924F21001277AB /* Build configuration list for PBXNativeTarget "ReverseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F3B94529924F21001277AB /* Debug */,
+				93F3B94629924F21001277AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
